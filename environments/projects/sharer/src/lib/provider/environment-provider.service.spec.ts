@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnvironmentHolder } from './environment-holder.service';
+import { EnvironmentProvider } from './environment-provider.service';
 
-describe('EnvironmentHolderService', () => {
+describe('EnvironmentProvider', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: EnvironmentHolder = TestBed.get(EnvironmentHolder);
+    const service: EnvironmentProvider = TestBed.get(EnvironmentProvider);
     expect(service).toBeTruthy();
   });
 });
