@@ -1,11 +1,11 @@
-import {Inject, Injectable} from '@angular/core';
-import {ENVIRONMENT} from './injector/inject-environment';
-import {EnvironmentId} from './environment-id.enum';
+import { Inject, Injectable } from '@angular/core';
+import { ENVIRONMENT } from '../injector/inject-environment';
+import { EnvironmentId } from './environment-id.enum';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EnvironmentSharerService {
+export class EnvironmentHolder {
 
   private environments = {
     [EnvironmentId.Provider]: {

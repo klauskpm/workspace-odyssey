@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnvironmentSharerService } from './environment-sharer.service';
+import { EnvironmentHolder } from './environment-holder.service';
 
 describe('EnvironmentSharerService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: EnvironmentSharerService = TestBed.get(EnvironmentSharerService);
+    const service: EnvironmentHolder = TestBed.get(EnvironmentHolder);
     expect(service).toBeTruthy();
   });
 });
