@@ -4,6 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DisplayerComponent } from '../../../provider/src/app/displayer/displayer.component';
 
+import { injectEnvironment } from 'sharer';
+import { environment } from '../environments/environment';
+
+const injectedEnvironment = injectEnvironment(environment);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +17,9 @@ import { DisplayerComponent } from '../../../provider/src/app/displayer/displaye
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    injectedEnvironment
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

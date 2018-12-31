@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "sharer": [
+        "dist/sharer"
+      ],
+      "sharer/*": [
+        "dist/sharer/*"
+      ]
+    }
   }
 }
