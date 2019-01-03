@@ -23,6 +23,7 @@
               "projects/provider/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "projects/provider/src/styles.css"
             ],
             "scripts": []
@@ -90,6 +91,7 @@
             "tsConfig": "projects/provider/tsconfig.spec.json",
             "karmaConfig": "projects/provider/karma.conf.js",
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "projects/provider/src/styles.css"
             ],
             "scripts": [],
@@ -133,6 +135,7 @@
               "projects/receiver/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "projects/receiver/src/styles.css"
             ],
             "scripts": []
@@ -200,6 +203,7 @@
             "tsConfig": "projects/receiver/tsconfig.spec.json",
             "karmaConfig": "projects/receiver/karma.conf.js",
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "projects/receiver/src/styles.css"
             ],
             "scripts": [],
