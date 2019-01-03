@@ -28,11 +28,19 @@
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/provider/src/environments/environment.ts",
+                  "with": "environments/environment.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
                   "replace": "projects/provider/src/environments/environment.ts",
-                  "with": "projects/provider/src/environments/environment.prod.ts"
+                  "with": "environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -60,6 +68,9 @@
             "browserTarget": "provider:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "provider:build:development"
+            },
             "production": {
               "browserTarget": "provider:build:production"
             }
@@ -127,11 +138,19 @@
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/receiver/src/environments/environment.ts",
+                  "with": "environments/environment.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
                   "replace": "projects/receiver/src/environments/environment.ts",
-                  "with": "projects/receiver/src/environments/environment.prod.ts"
+                  "with": "environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -159,6 +178,9 @@
             "browserTarget": "receiver:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "receiver:build:development"
+            },
             "production": {
               "browserTarget": "receiver:build:production"
             }

@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:provider": "ng serve provider --port 4200",
-    "start:receiver": "ng serve receiver --port 4300"
+    "start:provider": "ng serve provider --port 4200 -c development",
+    "start:receiver": "ng serve receiver --port 4300 -c development"
   },
   "private": true,
   "dependencies": {
