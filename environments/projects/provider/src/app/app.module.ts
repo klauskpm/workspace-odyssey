@@ -6,6 +6,7 @@ import { DisplayerComponent } from './displayer/displayer.component';
 import { injectEnvironment } from 'sharer';
 import { environment } from '../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material';
 
 const injectedEnvironment = injectEnvironment(environment);
 
@@ -16,7 +17,8 @@ const injectedEnvironment = injectEnvironment(environment);
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatToolbarModule
   ],
   providers: [
     injectedEnvironment
