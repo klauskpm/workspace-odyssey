@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"npm run start:provider\" \"npm run start:provider:prod\" \"npm run start:receiver\" \"npm run start:receiver:prod\" ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:provider": "ng serve provider --port 4200 -c development",
-    "start:receiver": "ng serve receiver --port 4300 -c development"
+    "start:provider": "ng serve provider --port 4200 -c development --open",
+    "start:provider:prod": "ng serve provider --port 4201 --prod --open",
+    "start:receiver": "ng serve receiver --port 4300 -c development --open",
+    "start:receiver:prod": "ng serve receiver --port 4301 --prod --open"
   },
   "private": true,
   "dependencies": {
@@ -32,10 +34,11 @@
     "@angular/cli": "~7.1.4",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "concurrently": "^4.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
