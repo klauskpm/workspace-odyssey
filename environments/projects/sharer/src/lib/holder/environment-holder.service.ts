@@ -9,9 +9,11 @@ export class EnvironmentHolder {
 
   private environments = {
     [EnvironmentId.Development]: {
+      title: 'Holder Development',
       secretKey: '7Y1H92912H9D81D',
     },
     [EnvironmentId.Production]: {
+      title: 'Holder Production',
       secretKey: '9A8USDJ2083JD2'
     }
   };
