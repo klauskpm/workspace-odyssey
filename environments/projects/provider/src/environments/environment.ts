@@ -7,7 +7,7 @@ import { EnvironmentId } from 'sharer';
 export const environment = {
   production: false,
   title: 'Provider Development',
-  id: EnvironmentId.Provider
+  id: EnvironmentId.Development
 };
 
 /*

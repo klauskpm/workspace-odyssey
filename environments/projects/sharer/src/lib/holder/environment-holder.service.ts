@@ -8,10 +8,10 @@ import { EnvironmentId } from './environment-id.enum';
 export class EnvironmentHolder {
 
   private environments = {
-    [EnvironmentId.Provider]: {
+    [EnvironmentId.Development]: {
       secretKey: '7Y1H92912H9D81D',
     },
-    [EnvironmentId.Receiver]: {
+    [EnvironmentId.Production]: {
       secretKey: '9A8USDJ2083JD2'
     }
   };

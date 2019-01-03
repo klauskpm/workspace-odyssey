@@ -1,4 +1,4 @@
 export enum EnvironmentId {
-  Provider = 0,
-  Receiver = 1
+  Development = 0,
+  Production = 1
 }
