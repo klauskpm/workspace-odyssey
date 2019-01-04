@@ -9,18 +9,20 @@ export class EnvironmentHolder {
 
   private environments = {
     [EnvironmentId.Development]: {
-      title: 'Holder Development',
-      secretKey: '7Y1H92912H9D81D',
+      id: 5,
+      label: 'Holder strategy',
+      title: 'Holder Development'
     },
     [EnvironmentId.Production]: {
-      title: 'Holder Production',
-      secretKey: '9A8USDJ2083JD2'
+      id: 5,
+      label: 'Holder strategy',
+      title: 'Holder Production'
     }
   };
 
   constructor(@Inject(ENVIRONMENT) private injectedEnvironment: any) { }
 
-  getEnvironment() {
+  get() {
     return this.environments[this.injectedEnvironment.id] || {};
   }
 }

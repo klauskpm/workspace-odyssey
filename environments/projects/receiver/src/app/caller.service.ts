@@ -9,6 +9,9 @@ export class CallerService {
   constructor() { }
 
   get() {
-    return environment.title;
+    return {
+      ...environment,
+      label: 'Receiver service'
+    };
   }
 }

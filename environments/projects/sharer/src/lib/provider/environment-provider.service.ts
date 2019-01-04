@@ -6,5 +6,12 @@ import { ENVIRONMENT } from '../injector/inject-environment';
 })
 export class EnvironmentProvider {
 
-  constructor(@Inject(ENVIRONMENT) public injectedEnvironment: any) { }
+  constructor(@Inject(ENVIRONMENT) private injectedEnvironment: any) { }
+
+  get() {
+    return {
+      ...this.injectedEnvironment,
+      label: 'Provider Strategy'
+    };
+  }
 }

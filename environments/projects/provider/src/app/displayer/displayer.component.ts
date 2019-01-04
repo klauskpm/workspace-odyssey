@@ -1,22 +1,29 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { ENVIRONMENT, EnvironmentProvider, EnvironmentHolder } from 'sharer';
+import { ENVIRONMENT, EnvironmentHolder, EnvironmentProvider } from 'sharer';
 import { CallerService } from '../../../../receiver/src/app/caller.service';
 
 @Component({
   selector: 'app-displayer',
   template: `
-    <h2>Displayer</h2>
-    <p>Provider application environment: {{environment}}</p>
-    <p>Caller service environment: {{caller.get()}}</p>
-    <p>Injected environment: {{injectedEnvironment.title}}</p>
-    <p>Environment provider: {{environmentProvider.injectedEnvironment.title}}</p>
-    <p>Environment holder: {{environmentHolder.getEnvironment() | json:2}}</p>
+    <h2>Strategies</h2>
+    <app-environment-displayer [environments]="strategies"></app-environment-displayer>
   `
 })
-export class DisplayerComponent implements OnInit {
+export class DisplayerComponent {
 
-  environment: string = environment.title;
+  public environment: any = {
+    ...environment,
+    label: 'Provider component'
+  };
+
+  public strategies = [
+    this.environment,
+    this.caller.get(),
+    this.injectedEnvironment,
+    this.environmentProvider.get(),
+    this.environmentHolder.get()
+  ];
 
   constructor(
     public caller: CallerService,
@@ -24,8 +31,5 @@ export class DisplayerComponent implements OnInit {
     public environmentProvider: EnvironmentProvider,
     public environmentHolder: EnvironmentHolder
   ) {}
-
-  ngOnInit() {
-  }
 
 }

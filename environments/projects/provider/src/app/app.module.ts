@@ -9,7 +9,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatChipsModule, MatToolbarModule } from '@angular/material';
 import { EnvironmentDisplayerComponent } from './environment-displayer/environment-displayer.component';
 
-const injectedEnvironment = injectEnvironment(environment);
+const injectedEnvironment = injectEnvironment({
+  ...environment,
+  label: 'Injected strategy'
+});
 
 @NgModule({
   declarations: [
