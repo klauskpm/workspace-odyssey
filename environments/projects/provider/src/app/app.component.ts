@@ -4,8 +4,7 @@ import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary">Provider</mat-toolbar>
-    <p>Application enviroment: {{environment}}</p>
+    <mat-toolbar color="primary">Provider - {{environment}}</mat-toolbar>
     <app-displayer></app-displayer>
   `,
 })
