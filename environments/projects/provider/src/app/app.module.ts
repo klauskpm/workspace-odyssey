@@ -6,19 +6,22 @@ import { DisplayerComponent } from './displayer/displayer.component';
 import { injectEnvironment } from 'sharer';
 import { environment } from '../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material';
+import { MatChipsModule, MatToolbarModule } from '@angular/material';
+import { EnvironmentDisplayerComponent } from './environment-displayer/environment-displayer.component';
 
 const injectedEnvironment = injectEnvironment(environment);
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayerComponent
+    DisplayerComponent,
+    EnvironmentDisplayerComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatChipsModule
   ],
   providers: [
     injectedEnvironment
