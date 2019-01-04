@@ -5,9 +5,16 @@ import { CallerService } from '../../../../receiver/src/app/caller.service';
 
 @Component({
   selector: 'app-displayer',
+  styles: [`
+    .basic-container {
+      padding: 30px;
+    }
+  `],
   template: `
-    <h2>Strategies</h2>
-    <app-environment-displayer [environments]="strategies"></app-environment-displayer>
+    <section class="basic-container">
+      <h2 class="mat-title">Strategies</h2>
+      <app-environment-displayer [environments]="strategies"></app-environment-displayer>
+    </section>
   `
 })
 export class DisplayerComponent {
