@@ -5,8 +5,7 @@ import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{title}}</h1>
-    <p>Application enviroment: {{environment}}</p>
+    <mat-toolbar color="primary">Receiver - {{environment}}</mat-toolbar>
     <app-displayer></app-displayer>
   `,
   styles: []

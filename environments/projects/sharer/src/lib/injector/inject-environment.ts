@@ -5,6 +5,9 @@ export const ENVIRONMENT = new InjectionToken<any>('Environment injection token'
 export function injectEnvironment(environment: any) {
   return {
     provide: ENVIRONMENT,
-    useValue: environment
+    useValue: {
+      ...environment,
+      label: 'Injected strategy'
+    }
   };
 }
