@@ -11,7 +11,7 @@ export class CallerService {
   get() {
     return {
       ...environment,
-      label: 'Receiver service'
+      label: 'Secondary service'
     };
   }
 }

@@ -115,9 +115,9 @@
         }
       }
     },
-    "receiver": {
-      "root": "projects/receiver/",
-      "sourceRoot": "projects/receiver/src",
+    "secondary": {
+      "root": "projects/secondary/",
+      "sourceRoot": "projects/secondary/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -125,18 +125,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/receiver",
-            "index": "projects/receiver/src/index.html",
-            "main": "projects/receiver/src/main.ts",
-            "polyfills": "projects/receiver/src/polyfills.ts",
-            "tsConfig": "projects/receiver/tsconfig.app.json",
+            "outputPath": "dist/secondary",
+            "index": "projects/secondary/src/index.html",
+            "main": "projects/secondary/src/main.ts",
+            "polyfills": "projects/secondary/src/polyfills.ts",
+            "tsConfig": "projects/secondary/tsconfig.app.json",
             "assets": [
-              "projects/receiver/src/favicon.ico",
-              "projects/receiver/src/assets"
+              "projects/secondary/src/favicon.ico",
+              "projects/secondary/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "projects/receiver/src/styles.css"
+              "projects/secondary/src/styles.css"
             ],
             "scripts": []
           },
@@ -144,7 +144,7 @@
             "development": {
               "fileReplacements": [
                 {
-                  "replace": "projects/receiver/src/environments/environment.ts",
+                  "replace": "projects/secondary/src/environments/environment.ts",
                   "with": "environments/environment.ts"
                 }
               ]
@@ -152,7 +152,7 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/receiver/src/environments/environment.ts",
+                  "replace": "projects/secondary/src/environments/environment.ts",
                   "with": "environments/environment.prod.ts"
                 }
               ],
@@ -178,38 +178,38 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "receiver:build"
+            "browserTarget": "secondary:build"
           },
           "configurations": {
             "development": {
-              "browserTarget": "receiver:build:development"
+              "browserTarget": "secondary:build:development"
             },
             "production": {
-              "browserTarget": "receiver:build:production"
+              "browserTarget": "secondary:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "receiver:build"
+            "browserTarget": "secondary:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/receiver/src/test.ts",
-            "polyfills": "projects/receiver/src/polyfills.ts",
-            "tsConfig": "projects/receiver/tsconfig.spec.json",
-            "karmaConfig": "projects/receiver/karma.conf.js",
+            "main": "projects/secondary/src/test.ts",
+            "polyfills": "projects/secondary/src/polyfills.ts",
+            "tsConfig": "projects/secondary/tsconfig.spec.json",
+            "karmaConfig": "projects/secondary/karma.conf.js",
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "projects/receiver/src/styles.css"
+              "projects/secondary/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/receiver/src/favicon.ico",
-              "projects/receiver/src/assets"
+              "projects/secondary/src/favicon.ico",
+              "projects/secondary/src/assets"
             ]
           }
         },
@@ -217,8 +217,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/receiver/tsconfig.app.json",
-              "projects/receiver/tsconfig.spec.json"
+              "projects/secondary/tsconfig.app.json",
+              "projects/secondary/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run start:main\" \"npm run start:main:prod\" \"npm run start:receiver\" \"npm run start:receiver:prod\" ",
+    "start": "concurrently \"npm run start:main\" \"npm run start:main:prod\" \"npm run start:secondary\" \"npm run start:secondary:prod\" ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start:main": "ng serve main --port 4200 -c development --open",
     "start:main:prod": "ng serve main --port 4201 --prod --open",
-    "start:receiver": "ng serve receiver --port 4300 -c development --open",
-    "start:receiver:prod": "ng serve receiver --port 4301 --prod --open"
+    "start:secondary": "ng serve secondary --port 4300 -c development --open",
+    "start:secondary:prod": "ng serve secondary --port 4301 --prod --open"
   },
   "private": true,
   "dependencies": {

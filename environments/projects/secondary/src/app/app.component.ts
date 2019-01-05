@@ -5,7 +5,7 @@ import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary">Receiver - {{environment}}</mat-toolbar>
+    <mat-toolbar color="primary">{{title}} - {{environment}}</mat-toolbar>
     <app-displayer></app-displayer>
   `,
   styles: []
@@ -13,5 +13,5 @@ import { environment } from '../environments/environment';
 export class AppComponent {
   environment: string = environment.title;
 
-  title = 'receiver';
+  title = 'Secondary';
 }

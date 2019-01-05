@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ENVIRONMENT, EnvironmentHolder, EnvironmentProvider } from 'sharer';
-import { CallerService } from '../../../../receiver/src/app/caller.service';
+import { CallerService } from '../../../../secondary/src/app/caller.service';
 
 @Component({
   selector: 'app-displayer',
