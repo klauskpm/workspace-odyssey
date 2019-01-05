@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "sharer": [
-        "dist/sharer"
+      "strategies": [
+        "dist/strategies"
       ],
-      "sharer/*": [
-        "dist/sharer/*"
+      "strategies/*": [
+        "dist/strategies/*"
       ]
     }
   }

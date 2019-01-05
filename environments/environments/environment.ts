@@ -1,4 +1,4 @@
-import { EnvironmentId } from 'sharer';
+import { EnvironmentId } from 'strategies';
 
 export const environment = {
   production: false,

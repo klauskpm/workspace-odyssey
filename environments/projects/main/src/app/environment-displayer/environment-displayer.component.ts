@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EnvironmentId } from 'sharer';
+import { EnvironmentId } from 'strategies';
 import { from, Observable } from 'rxjs';
 import { map, toArray } from 'rxjs/operators';
 

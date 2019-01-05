@@ -1,5 +1,5 @@
 /*
- * Public API Surface of sharer
+ * Public API Surface of strategies
  */
 
 // INJECTOR
