@@ -21,7 +21,7 @@ export class DisplayerComponent {
 
   public environment: any = {
     ...environment,
-    label: 'Provider component'
+    label: 'Main component'
   };
 
   public strategies = [

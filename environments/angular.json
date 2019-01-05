@@ -3,9 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "provider": {
-      "root": "projects/provider/",
-      "sourceRoot": "projects/provider/src",
+    "main": {
+      "root": "projects/main/",
+      "sourceRoot": "projects/main/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -13,18 +13,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/provider",
-            "index": "projects/provider/src/index.html",
-            "main": "projects/provider/src/main.ts",
-            "polyfills": "projects/provider/src/polyfills.ts",
-            "tsConfig": "projects/provider/tsconfig.app.json",
+            "outputPath": "dist/main",
+            "index": "projects/main/src/index.html",
+            "main": "projects/main/src/main.ts",
+            "polyfills": "projects/main/src/polyfills.ts",
+            "tsConfig": "projects/main/tsconfig.app.json",
             "assets": [
-              "projects/provider/src/favicon.ico",
-              "projects/provider/src/assets"
+              "projects/main/src/favicon.ico",
+              "projects/main/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "projects/provider/src/styles.css"
+              "projects/main/src/styles.css"
             ],
             "scripts": []
           },
@@ -32,7 +32,7 @@
             "development": {
               "fileReplacements": [
                 {
-                  "replace": "projects/provider/src/environments/environment.ts",
+                  "replace": "projects/main/src/environments/environment.ts",
                   "with": "environments/environment.ts"
                 }
               ]
@@ -40,7 +40,7 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/provider/src/environments/environment.ts",
+                  "replace": "projects/main/src/environments/environment.ts",
                   "with": "environments/environment.prod.ts"
                 }
               ],
@@ -66,38 +66,38 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "provider:build"
+            "browserTarget": "main:build"
           },
           "configurations": {
             "development": {
-              "browserTarget": "provider:build:development"
+              "browserTarget": "main:build:development"
             },
             "production": {
-              "browserTarget": "provider:build:production"
+              "browserTarget": "main:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "provider:build"
+            "browserTarget": "main:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/provider/src/test.ts",
-            "polyfills": "projects/provider/src/polyfills.ts",
-            "tsConfig": "projects/provider/tsconfig.spec.json",
-            "karmaConfig": "projects/provider/karma.conf.js",
+            "main": "projects/main/src/test.ts",
+            "polyfills": "projects/main/src/polyfills.ts",
+            "tsConfig": "projects/main/tsconfig.spec.json",
+            "karmaConfig": "projects/main/karma.conf.js",
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "projects/provider/src/styles.css"
+              "projects/main/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/provider/src/favicon.ico",
-              "projects/provider/src/assets"
+              "projects/main/src/favicon.ico",
+              "projects/main/src/assets"
             ]
           }
         },
@@ -105,8 +105,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/provider/tsconfig.app.json",
-              "projects/provider/tsconfig.spec.json"
+              "projects/main/tsconfig.app.json",
+              "projects/main/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -263,5 +263,5 @@
       }
     }
   },
-  "defaultProject": "provider"
+  "defaultProject": "main"
 }

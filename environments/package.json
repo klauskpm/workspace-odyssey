@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run start:provider\" \"npm run start:provider:prod\" \"npm run start:receiver\" \"npm run start:receiver:prod\" ",
+    "start": "concurrently \"npm run start:main\" \"npm run start:main:prod\" \"npm run start:receiver\" \"npm run start:receiver:prod\" ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:provider": "ng serve provider --port 4200 -c development --open",
-    "start:provider:prod": "ng serve provider --port 4201 --prod --open",
+    "start:main": "ng serve main --port 4200 -c development --open",
+    "start:main:prod": "ng serve main --port 4201 --prod --open",
     "start:receiver": "ng serve receiver --port 4300 -c development --open",
     "start:receiver:prod": "ng serve receiver --port 4301 --prod --open"
   },
