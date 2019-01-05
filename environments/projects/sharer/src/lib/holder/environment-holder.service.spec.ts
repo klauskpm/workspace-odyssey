@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { EnvironmentHolder } from './environment-holder.service';
 
-describe('EnvironmentSharerService', () => {
+describe('EnvironmentHolderService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
