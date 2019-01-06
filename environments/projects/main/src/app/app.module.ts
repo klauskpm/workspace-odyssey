@@ -3,13 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DisplayerComponent } from './displayer/displayer.component';
-import { injectEnvironment } from 'strategies';
+import { ENVIRONMENT } from 'strategies';
 import { environment } from '../environments/environment';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatChipsModule, MatToolbarModule } from '@angular/material';
 import { EnvironmentDisplayerComponent } from './environment-displayer/environment-displayer.component';
-
-const injectedEnvironment = injectEnvironment(environment);
 
 @NgModule({
   declarations: [
@@ -24,7 +22,10 @@ const injectedEnvironment = injectEnvironment(environment);
     MatChipsModule
   ],
   providers: [
-    injectedEnvironment
+    {
+      provide: ENVIRONMENT,
+      useValue: { ...environment, label: 'Injected strategy' }
+    }
   ],
   bootstrap: [AppComponent]
 })
