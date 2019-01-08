@@ -29,19 +29,11 @@
             "scripts": []
           },
           "configurations": {
-            "development": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/main/src/environments/environment.ts",
-                  "with": "environments/environment.ts"
-                }
-              ]
-            },
             "production": {
               "fileReplacements": [
                 {
                   "replace": "projects/main/src/environments/environment.ts",
-                  "with": "environments/environment.prod.ts"
+                  "with": "projects/main/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -69,9 +61,6 @@
             "browserTarget": "main:build"
           },
           "configurations": {
-            "development": {
-              "browserTarget": "main:build:development"
-            },
             "production": {
               "browserTarget": "main:build:production"
             }
@@ -141,19 +130,11 @@
             "scripts": []
           },
           "configurations": {
-            "development": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/secondary/src/environments/environment.ts",
-                  "with": "environments/environment.ts"
-                }
-              ]
-            },
             "production": {
               "fileReplacements": [
                 {
                   "replace": "projects/secondary/src/environments/environment.ts",
-                  "with": "environments/environment.prod.ts"
+                  "with": "projects/secondary/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -181,9 +162,6 @@
             "browserTarget": "secondary:build"
           },
           "configurations": {
-            "development": {
-              "browserTarget": "secondary:build:development"
-            },
             "production": {
               "browserTarget": "secondary:build:production"
             }
