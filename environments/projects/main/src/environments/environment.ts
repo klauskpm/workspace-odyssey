@@ -4,11 +4,7 @@
 
 import { globalEnvironment } from '../../../../environments/environment';
 
-export const environment = {
-  production: false,
-  title: 'Main Development',
-  ...globalEnvironment
-};
+export const environment = globalEnvironment;
 
 /*
  * For easier debugging in development mode, you can import the following file
