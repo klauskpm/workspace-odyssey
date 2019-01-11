@@ -5,6 +5,7 @@ import { environment } from '../environments/environment';
   selector: 'app-root',
   template: `
     <mat-toolbar color="primary">{{title}} - {{environment | json}}</mat-toolbar>
+    <app-environment-displayer></app-environment-displayer>
   `
 })
 export class AppComponent {
