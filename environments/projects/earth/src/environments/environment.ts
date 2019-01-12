@@ -5,8 +5,8 @@
 import { globalEnvironment } from '../../../../environments/environment';
 
 export const environment = {
-  title: 'Earth',
-  ...globalEnvironment
+  application: 'Earth',
+  global: globalEnvironment
 };
 
 /*

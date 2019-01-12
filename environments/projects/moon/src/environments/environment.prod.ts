@@ -1,6 +1,6 @@
 import { globalEnvironment } from '../../../../environments/environment.prod';
 
 export const environment = {
-  title: 'Moon',
-  ...globalEnvironment
+  application: 'Moon',
+  global: globalEnvironment
 };
