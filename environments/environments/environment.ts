@@ -1,4 +1,4 @@
-import { EnvironmentId } from 'strategies';
+import { EnvironmentId } from 'satellite';
 
 export const globalEnvironment = {
   production: false,
