@@ -1,5 +1,4 @@
 import { Inject, Injectable } from '@angular/core';
-import { GLOBAL_ENVIRONMENT } from './global-environment.token';
 import {
   DIRECT_FOR_ROOT,
   DIRECT_FUNCTION,
@@ -11,6 +10,7 @@ import {
   EXTENDED_FUNCTION,
   EXTENDED_PROVIDER
 } from '../tokens/tokens';
+import { ENVIRONMENTER } from './environmenter.token';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ import {
 export class Environmenter {
 
   constructor(
-    @Inject(GLOBAL_ENVIRONMENT) public environment: any,
+    @Inject(ENVIRONMENTER) public environment: any,
 
     @Inject(DIRECT_FOR_ROOT) private directForRoot: any,
     @Inject(EXTENDED_FOR_ROOT) private extendedForRoot: any,

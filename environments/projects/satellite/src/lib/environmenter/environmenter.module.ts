@@ -1,7 +1,8 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GLOBAL_ENVIRONMENT } from './global-environment.token';
+
 import { DIRECT_FOR_ROOT, DOUBLE_EXTENDED_FOR_ROOT, EXTENDED_FOR_ROOT } from '../tokens/tokens';
+import { ENVIRONMENTER } from './environmenter.token';
 
 const forRoot = { value: 'value' };
 
@@ -17,7 +18,7 @@ export class EnvironmenterModule {
       ngModule: EnvironmenterModule,
       providers: [
         {
-          provide: GLOBAL_ENVIRONMENT,
+          provide: ENVIRONMENTER,
           useValue: environment
         },
         {
