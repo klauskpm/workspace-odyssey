@@ -3,105 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "moon": {
-      "root": "projects/moon/",
-      "sourceRoot": "projects/moon/src",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/moon",
-            "index": "projects/moon/src/index.html",
-            "main": "projects/moon/src/main.ts",
-            "polyfills": "projects/moon/src/polyfills.ts",
-            "tsConfig": "projects/moon/tsconfig.app.json",
-            "assets": [
-              "projects/moon/src/favicon.ico",
-              "projects/moon/src/assets"
-            ],
-            "styles": [
-              "projects/moon/src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/moon/src/environments/environment.ts",
-                  "with": "projects/moon/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "moon:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "moon:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "moon:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/moon/src/test.ts",
-            "polyfills": "projects/moon/src/polyfills.ts",
-            "tsConfig": "projects/moon/tsconfig.spec.json",
-            "karmaConfig": "projects/moon/karma.conf.js",
-            "styles": [
-              "projects/moon/src/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "projects/moon/src/favicon.ico",
-              "projects/moon/src/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/moon/tsconfig.app.json",
-              "projects/moon/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "earth": {
       "root": "projects/earth/",
       "sourceRoot": "projects/earth/src",
@@ -203,6 +104,105 @@
         }
       }
     },
+    "moon": {
+      "root": "projects/moon/",
+      "sourceRoot": "projects/moon/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/moon",
+            "index": "projects/moon/src/index.html",
+            "main": "projects/moon/src/main.ts",
+            "polyfills": "projects/moon/src/polyfills.ts",
+            "tsConfig": "projects/moon/tsconfig.app.json",
+            "assets": [
+              "projects/moon/src/favicon.ico",
+              "projects/moon/src/assets"
+            ],
+            "styles": [
+              "projects/moon/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/moon/src/environments/environment.ts",
+                  "with": "projects/moon/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "moon:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "moon:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "moon:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/moon/src/test.ts",
+            "polyfills": "projects/moon/src/polyfills.ts",
+            "tsConfig": "projects/moon/tsconfig.spec.json",
+            "karmaConfig": "projects/moon/karma.conf.js",
+            "styles": [
+              "projects/moon/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/moon/src/favicon.ico",
+              "projects/moon/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/moon/tsconfig.app.json",
+              "projects/moon/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "satellite": {
       "root": "projects/satellite",
       "sourceRoot": "projects/satellite/src",
@@ -239,5 +239,5 @@
       }
     }
   },
-  "defaultProject": "main"
+  "defaultProject": "earth"
 }
