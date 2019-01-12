@@ -5,16 +5,22 @@ import { EnvironmentsService } from './environments.service';
 @Component({
   selector: 'app-environment-displayer',
   template: `
-    <div *ngFor="let environment of environmentsList$ | async">
-      <h2>{{environment.title}}</h2>
-      <mat-chip-list>
-        <mat-chip
-          *ngFor="let data of environment.data"
-          [color]="data.color"
-          [selected]="data.selected"
-        >{{data | json}}</mat-chip>
-      </mat-chip-list>
-    </div>
+    <mat-accordion [multi]="true">
+      <mat-expansion-panel
+        *ngFor="let environment of environmentsList$ | async"
+        [expanded]="true"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ environment.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div *ngFor="let data of environment.data">
+          <pre>{{ data | json }}</pre>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
   `,
   styles: []
 })

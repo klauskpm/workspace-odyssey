@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EnvironmentDisplayerComponent } from './environment-displayer.component';
-import { MatChipsModule } from '@angular/material';
+import { MatExpansionModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatChipsModule,
+    MatExpansionModule
   ],
   declarations: [EnvironmentDisplayerComponent],
   exports: [EnvironmentDisplayerComponent]

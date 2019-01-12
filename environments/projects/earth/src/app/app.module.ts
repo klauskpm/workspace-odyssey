@@ -12,6 +12,7 @@ import {
   injectToken
 } from 'satellite';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const provider = { value: 'provider' };
 
@@ -21,6 +22,7 @@ const provider = { value: 'provider' };
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     EnvironmentDisplayerModule,
     EnvironmenterModule.forRoot(environment)
