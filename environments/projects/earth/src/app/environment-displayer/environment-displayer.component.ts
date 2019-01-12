@@ -16,16 +16,38 @@ import { EnvironmentsService } from './environments.service';
           </mat-panel-title>
         </mat-expansion-panel-header>
 
-        <div *ngFor="let data of environment.data">
-          <pre>{{ data | json }}</pre>
-        </div>
+        <mat-grid-list
+          [cols]="gridConfiguration.cols"
+          [rowHeight]="gridConfiguration.rowHeight"
+        >
+          <mat-grid-tile
+            class="my-grid"
+            *ngFor="let data of environment.data;"
+            [colspan]="gridConfiguration.colSpan"
+            [rowspan]="gridConfiguration.rowSpan"
+          >
+            <pre>{{ data | json }}</pre>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-expansion-panel>
     </mat-accordion>
   `,
-  styles: []
+  styles: [
+    `
+      .my-grid {
+        background-color: #616161;
+      }
+    `
+  ]
 })
 export class EnvironmentDisplayerComponent implements OnInit {
   public environmentsList$: Observable<Array<any>>;
+  public gridConfiguration = {
+    cols: 3,
+    rowHeight: '140px',
+    colSpan: 1,
+    rowSpan: 1
+  };
 
   constructor(
     private environmentsService: EnvironmentsService

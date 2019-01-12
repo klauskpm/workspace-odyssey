@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Environmenter, EnvironmentId } from 'satellite';
+import { Environmenter } from 'satellite';
 import { from, Observable, of, zip } from 'rxjs';
 import { map, switchMap, toArray } from 'rxjs/operators';
 
@@ -7,11 +7,6 @@ import { map, switchMap, toArray } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EnvironmentsService {
-  private environmentColors = {
-    [EnvironmentId.Development]: 'primary',
-    [EnvironmentId.Production]: 'accent'
-  };
-
   constructor(
     private environmenter: Environmenter
   ) { }
@@ -38,34 +33,26 @@ export class EnvironmentsService {
       .pipe(
         switchMap((environments: any) => {
           const title$ = of(environments.title);
-          const dataWithMatChipProperties$ = this.addMatChipProperties(environments.data);
-          return zip(title$, dataWithMatChipProperties$);
+          const transformedData$ = this.prepareForExpansionTable(environments.data);
+          return zip(title$, transformedData$);
         }),
         map(([title, data]) => ({title, data})),
         toArray()
       );
   }
 
-  private addMatChipProperties(environments: Array<any>): Observable<Array<any>> {
+  private prepareForExpansionTable(environments: any[]) {
     return from(environments)
       .pipe(
-        this.addSelected(),
-        this.addColor(),
+        this.removeId(),
         toArray()
       );
   }
 
-  private addSelected() {
-    return map((environment: any) => ({
-      ...environment,
-      selected: typeof environment.id !== 'undefined'
-    }));
-  }
-
-  private addColor() {
-    return map((environment: any) => ({
-      ...environment,
-      color: this.environmentColors[environment.id]
-    }));
+  private removeId() {
+    return map((environment: any) => {
+        const {id, ...newEnvironment} = environment;
+        return newEnvironment;
+      });
   }
 }
