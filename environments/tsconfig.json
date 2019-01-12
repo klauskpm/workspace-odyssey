@@ -24,6 +24,12 @@
       ],
       "strategies/*": [
         "dist/strategies/*"
+      ],
+      "satellite": [
+        "dist/satellite"
+      ],
+      "satellite/*": [
+        "dist/satellite/*"
       ]
     }
   }
