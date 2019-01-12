@@ -6,10 +6,7 @@ import { EnvironmentsService } from './environments.service';
   selector: 'app-environment-displayer',
   template: `
     <mat-accordion [multi]="true">
-      <mat-expansion-panel
-        *ngFor="let environment of environmentsList$ | async"
-        [expanded]="true"
-      >
+      <mat-expansion-panel *ngFor="let environment of environmentsList$ | async">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{ environment.title }}
