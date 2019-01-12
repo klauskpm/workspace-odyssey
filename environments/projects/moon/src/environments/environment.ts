@@ -4,7 +4,10 @@
 
 import { globalEnvironment } from '../../../../environments/environment';
 
-export const environment = globalEnvironment;
+export const environment = {
+  title: 'Moon',
+  ...globalEnvironment
+};
 
 /*
  * For easier debugging in development mode, you can import the following file
