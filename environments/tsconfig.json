@@ -19,12 +19,6 @@
       "dom"
     ],
     "paths": {
-      "strategies": [
-        "dist/strategies"
-      ],
-      "strategies/*": [
-        "dist/strategies/*"
-      ],
       "satellite": [
         "dist/satellite"
       ],
