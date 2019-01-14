@@ -14,7 +14,7 @@ import {
   injectToken
 } from 'satellite';
 
-const provider = { value: 'provider' };
+const provider = { strategy: 'provider' };
 
 @NgModule({
   declarations: [
@@ -35,11 +35,17 @@ const provider = { value: 'provider' };
     },
     {
       provide: EXTENDED_PROVIDER,
-      useValue: { ...environment, provider }
+      useValue: {
+        global: { ...environment.global },
+        application: { ...environment.application, provider }
+      }
     },
     {
       provide: DOUBLE_EXTENDED_PROVIDER,
-      useValue: { ...environment, ...provider }
+      useValue: {
+        global: { ...environment.global },
+        application: { ...environment.application, ...provider }
+      }
     }
   ],
   bootstrap: [AppComponent]

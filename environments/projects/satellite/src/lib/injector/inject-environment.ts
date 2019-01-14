@@ -3,7 +3,7 @@ import { DIRECT_FUNCTION, DOUBLE_EXTENDED_FUNCTION, EXTENDED_FUNCTION } from '..
 
 export const ENVIRONMENT = new InjectionToken<any>('Environment injection token');
 
-const objFunc = { value: 'value' };
+const objFunc = { strategy: 'inject' };
 
 export function injectToken(environment) {
   return [
@@ -17,11 +17,17 @@ export function injectToken(environment) {
     },
     {
       provide: EXTENDED_FUNCTION,
-      useValue: { ...environment, objFunc }
+      useValue: {
+        global: { ...environment.global },
+        application: { ...environment.application, objFunc }
+      }
     },
     {
       provide: DOUBLE_EXTENDED_FUNCTION,
-      useValue: { ...environment, ...objFunc }
+      useValue: {
+        global: { ...environment.global },
+        application: { ...environment.application, ...objFunc }
+      }
     }
   ];
 }

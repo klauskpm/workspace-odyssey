@@ -5,7 +5,9 @@
 import { globalEnvironment } from '../../../../environments/environment';
 
 export const environment = {
-  application: 'Moon',
+  application: {
+    project: 'Moon'
+  },
   global: globalEnvironment
 };
 

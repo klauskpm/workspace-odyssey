@@ -33,6 +33,23 @@ export class Environmenter {
     @Inject(DOUBLE_EXTENDED_PROVIDER) private doubleExtendedProvider: any,
   ) {}
 
+  getGlobalEnvironment(environment?) {
+    return (environment || this.environment).global;
+  }
+
+  getApplicationEnvironment(environment?) {
+    return (environment || this.environment).application;
+  }
+
+  getEnvironment(environment?) {
+    const newEnvironment = { ...(environment || this.environment) };
+
+    return {
+      ...newEnvironment.global,
+      ...newEnvironment.application
+    };
+  }
+
   public getForRootEnvironments() {
     return [
       this.directForRoot,

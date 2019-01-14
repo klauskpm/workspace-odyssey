@@ -45,6 +45,7 @@ export class EnvironmentsService {
     return from(environments)
       .pipe(
         this.removeId(),
+        this.extractEnvironment(),
         toArray()
       );
   }
@@ -54,5 +55,9 @@ export class EnvironmentsService {
         const {id, ...newEnvironment} = environment;
         return newEnvironment;
       });
+  }
+
+  private extractEnvironment() {
+    return map((environment: any) => this.environmenter.getEnvironment(environment));
   }
 }

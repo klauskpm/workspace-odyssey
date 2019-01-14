@@ -42,7 +42,7 @@ export class EnvironmentDisplayerComponent implements OnInit {
   public environmentsList$: Observable<Array<any>>;
   public gridConfiguration = {
     cols: 3,
-    rowHeight: this.environmenter.environment.global.production ? '180px' : '240px',
+    rowHeight: this.environmenter.environment.global.production ? '180px' : '200px',
     colSpan: 1,
     rowSpan: 1
   };

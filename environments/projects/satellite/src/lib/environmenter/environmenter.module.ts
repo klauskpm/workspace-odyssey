@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DIRECT_FOR_ROOT, DOUBLE_EXTENDED_FOR_ROOT, EXTENDED_FOR_ROOT } from '../tokens/tokens';
 import { ENVIRONMENTER } from './environmenter.token';
 
-const forRoot = { value: 'value' };
+const forRoot = { strategy: 'forRoot' };
 
 @NgModule({
   declarations: [],
@@ -27,11 +27,17 @@ export class EnvironmenterModule {
         },
         {
           provide: EXTENDED_FOR_ROOT,
-          useValue: { ...environment, forRoot }
+          useValue: {
+            global: { ...environment.global },
+            application: { ...environment.application, forRoot }
+          }
         },
         {
           provide: DOUBLE_EXTENDED_FOR_ROOT,
-          useValue: { ...environment, ...forRoot }
+          useValue: {
+            global: { ...environment.global },
+            application: { ...environment.application, ...forRoot }
+          }
         }
       ]
     };
