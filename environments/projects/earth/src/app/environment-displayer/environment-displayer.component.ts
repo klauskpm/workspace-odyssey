@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EnvironmentsService } from './environments.service';
-import { Environmenter } from 'satellite';
 
 @Component({
   selector: 'app-environment-displayer',
@@ -42,14 +41,13 @@ export class EnvironmentDisplayerComponent implements OnInit {
   public environmentsList$: Observable<Array<any>>;
   public gridConfiguration = {
     cols: 3,
-    rowHeight: this.environmenter.environment.global.production ? '180px' : '200px',
+    rowHeight: '200px',
     colSpan: 1,
     rowSpan: 1
   };
 
   constructor(
-    private environmentsService: EnvironmentsService,
-    private environmenter: Environmenter
+    private environmentsService: EnvironmentsService
   ) {}
 
   ngOnInit() {
