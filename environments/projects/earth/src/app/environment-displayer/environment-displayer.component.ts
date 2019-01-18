@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Environmenter } from 'ng-environmenter';
+import { EnvironmentProviderService } from '../../../../moon/src/app/environment-provider.service';
 
 @Component({
   selector: 'app-environment-displayer',
@@ -47,19 +48,25 @@ export class EnvironmentDisplayerComponent implements OnInit {
   };
 
   constructor(
-    private environmenter: Environmenter
+    private environmenter: Environmenter,
+    private environmentProvider: EnvironmentProviderService
   ) {}
 
   ngOnInit() {
     this.environmentsList$ = of([
-      {
-        title: 'Earth',
-        data: [
-          this.environmenter.getApplicationEnvironment(),
-          this.environmenter.getGlobalEnvironment(),
-          this.environmenter.getEnvironment(),
-        ]
-      }
+      this.getEnvironment(),
+      this.environmentProvider.getEnvironment()
     ]);
+  }
+
+  getEnvironment() {
+    return {
+      title: 'Earth',
+      data: [
+        this.environmenter.getApplicationEnvironment(),
+        this.environmenter.getGlobalEnvironment(),
+        this.environmenter.getEnvironment(),
+      ]
+    };
   }
 }
