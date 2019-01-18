@@ -16,13 +16,30 @@ export class EnvironmentHolder {
     }
   };
 
-  constructor(private environmenter: Environmenter) { }
+  constructor(
+    private environmenter: Environmenter
+  ) { }
 
-  get() {
+  getEnvironment() {
+    const applicationEnvironment = this.environmenter.getApplicationEnvironment();
+    const globalEnvironment = this.environmenter.getGlobalEnvironment();
     const environment = this.environmenter.getEnvironment();
+
+    return {
+      title: 'Satellite',
+      data: [
+        this.generateHolderEnvironment(applicationEnvironment),
+        this.generateHolderEnvironment(globalEnvironment),
+        this.generateHolderEnvironment(environment)
+      ]
+    };
+  }
+
+  generateHolderEnvironment(environment) {
+    const holderEnvironment = this.environments[environment.id] || {};
     return {
       ...environment,
-      ...this.environments[environment.id]
+      ...holderEnvironment
     };
   }
 }
