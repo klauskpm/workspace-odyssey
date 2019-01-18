@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Environmenter } from 'ng-environmenter';
 import { EnvironmentProviderService } from '../../../../moon/src/app/environment-provider.service';
+import { EnvironmentHolder } from 'satellite';
 
 @Component({
   selector: 'app-environment-displayer',
@@ -49,13 +50,15 @@ export class EnvironmentDisplayerComponent implements OnInit {
 
   constructor(
     private environmenter: Environmenter,
-    private environmentProvider: EnvironmentProviderService
+    private environmentProvider: EnvironmentProviderService,
+    private environmentHolder: EnvironmentHolder
   ) {}
 
   ngOnInit() {
     this.environmentsList$ = of([
       this.getEnvironment(),
-      this.environmentProvider.getEnvironment()
+      this.environmentProvider.getEnvironment(),
+      this.environmentHolder.getEnvironment()
     ]);
   }
 
