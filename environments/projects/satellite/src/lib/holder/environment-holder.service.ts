@@ -1,6 +1,6 @@
-import { Inject, Injectable } from '@angular/core';
-import { ENVIRONMENT } from '../injector/inject-environment';
+import { Injectable } from '@angular/core';
 import { EnvironmentId } from './environment-id.enum';
+import { Environmenter } from 'ng-environmenter';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +16,13 @@ export class EnvironmentHolder {
     }
   };
 
-  constructor(@Inject(ENVIRONMENT) private injectedEnvironment: any) { }
+  constructor(private environmenter: Environmenter) { }
 
   get() {
+    const environment = this.environmenter.getEnvironment();
     return {
-      ...this.injectedEnvironment,
-      ...this.environments[this.injectedEnvironment.id]
+      ...environment,
+      ...this.environments[environment.id]
     };
   }
 }
