@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material';
 import { EnvironmentDisplayerModule } from '../../../earth/src/app/environment-displayer/environment-displayer.module';
+import { EnvironmenterModule } from 'ng-environmenter';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { EnvironmentDisplayerModule } from '../../../earth/src/app/environment-d
     BrowserAnimationsModule,
     MatToolbarModule,
     EnvironmentDisplayerModule,
+    EnvironmenterModule.forRoot(environment)
   ],
   bootstrap: [AppComponent]
 })
