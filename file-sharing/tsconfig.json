@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "satellite": [
+        "dist/satellite"
+      ],
+      "satellite/*": [
+        "dist/satellite/*"
+      ]
+    }
   }
 }
