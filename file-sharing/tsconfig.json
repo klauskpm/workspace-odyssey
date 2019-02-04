@@ -22,6 +22,9 @@
       "$APP/*": [
         "projects/**/src/app/*"
       ],
+      "$LIB/*": [
+        "projects/**/src/lib/*"
+      ],
       "satellite": [
         "dist/satellite"
       ],
