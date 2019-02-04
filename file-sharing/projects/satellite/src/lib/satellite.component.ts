@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-satellite',
   template: `
-    <p>
-      satellite works!
-    </p>
+    <p>Satellite component</p>
   `,
   styles: []
 })
