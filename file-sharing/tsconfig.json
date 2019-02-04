@@ -19,6 +19,9 @@
       "dom"
     ],
     "paths": {
+      "$APP/*": [
+        "projects/**/src/app/*"
+      ],
       "satellite": [
         "dist/satellite"
       ],
