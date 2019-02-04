@@ -25,6 +25,10 @@
       "$LIB/*": [
         "projects/**/src/lib/*"
       ],
+      "MONO/*": [
+        "projects/**/src/app/*",
+        "projects/**/src/lib/*"
+      ],
       "satellite": [
         "dist/satellite"
       ],
