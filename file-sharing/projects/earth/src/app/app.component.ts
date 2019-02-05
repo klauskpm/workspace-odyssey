@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'earth-root',
   template: `
     <p>Earth app component</p>
   `,
