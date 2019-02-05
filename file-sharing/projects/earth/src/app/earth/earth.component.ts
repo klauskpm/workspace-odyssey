@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'earth-earth',
+  selector: 'ear-earth',
   template: `
     <p>
       earth works!

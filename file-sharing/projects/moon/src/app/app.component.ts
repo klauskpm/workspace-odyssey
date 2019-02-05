@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <p>Moon app component</p>
-    <earth-earth></earth-earth>
+    <ear-earth></ear-earth>
   `,
   styles: []
 })

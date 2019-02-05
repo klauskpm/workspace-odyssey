@@ -7,7 +7,7 @@
       "root": "projects/earth/",
       "sourceRoot": "projects/earth/src",
       "projectType": "application",
-      "prefix": "earth",
+      "prefix": "ear",
       "schematics": {},
       "architect": {
         "build": {
