@@ -13,6 +13,7 @@ import { EarthComponent } from './earth/earth.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [EarthComponent]
 })
 export class AppModule { }

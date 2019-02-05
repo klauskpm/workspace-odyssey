@@ -19,15 +19,8 @@
       "dom"
     ],
     "paths": {
-      "$APP/*": [
-        "projects/**/src/app/*"
-      ],
-      "$LIB/*": [
-        "projects/**/src/lib/*"
-      ],
-      "MONO/*": [
-        "projects/**/src/app/*",
-        "projects/**/src/lib/*"
+      "$APP/earth/*": [
+        "projects/earth/src/app/*"
       ],
       "satellite": [
         "dist/satellite"
