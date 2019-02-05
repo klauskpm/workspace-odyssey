@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'moo-root',
   template: `
     <p>Moon app component</p>
     <ear-earth></ear-earth>

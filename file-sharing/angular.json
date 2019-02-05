@@ -106,7 +106,7 @@
       "root": "projects/moon/",
       "sourceRoot": "projects/moon/src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "moo",
       "schematics": {},
       "architect": {
         "build": {

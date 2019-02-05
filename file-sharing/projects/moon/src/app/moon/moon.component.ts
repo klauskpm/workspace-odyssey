@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-moon',
+  selector: 'moo-moon',
   template: `
     <p>
       moon works!
