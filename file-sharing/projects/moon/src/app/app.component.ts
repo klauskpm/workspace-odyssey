@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <p>Moon app component</p>
     <ear-earth></ear-earth>
+    <stlt-satellite></stlt-satellite>
   `,
   styles: []
 })
