@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-satellite',
+  selector: 'stlt-satellite',
   template: `
     <p>Satellite component</p>
   `,
