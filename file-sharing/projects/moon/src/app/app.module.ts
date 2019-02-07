@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MoonComponent } from './moon/moon.component';
 import { EarthComponent } from '$APP/earth/earth/earth.component';
 import { SatelliteModule } from 'satellite';
+import { EngineModule } from 'satellite/engine';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SatelliteModule } from 'satellite';
   ],
   imports: [
     BrowserModule,
-    SatelliteModule
+    SatelliteModule,
+    EngineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
