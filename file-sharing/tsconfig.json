@@ -22,6 +22,12 @@
       "$APP/earth/*": [
         "projects/earth/src/app/*"
       ],
+      "$LIB/satellite": [
+        "projects/satellite/src/public_api.ts"
+      ],
+      "$LIB/satellite/engine": [
+        "projects/satellite/engine/src/public_api.ts"
+      ],
       "satellite": [
         "dist/satellite"
       ],

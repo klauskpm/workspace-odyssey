@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MoonComponent } from './moon/moon.component';
 import { EarthComponent } from '$APP/earth/earth/earth.component';
-import { SatelliteModule } from 'satellite';
-import { EngineModule } from 'satellite/engine';
+import { SatelliteModule } from '$LIB/satellite';
+import { EngineModule } from '$LIB/satellite/engine';
+
 
 @NgModule({
   declarations: [
